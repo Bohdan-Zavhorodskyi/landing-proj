@@ -3,10 +3,13 @@ import { Link } from "react-router-dom";
 import { Select, Menu } from "antd";
 import { useTranslation } from "react-i18next";
 
+import useStyles from "./styles";
+
 const { Option } = Select;
 
 const HeaderNav = ({ changeLanguage }) => {
   const { t } = useTranslation();
+  const classes = useStyles();
   const [optionValue, setOptionValue] = useState("uk");
 
   const setNewValue = (value) => {
@@ -15,7 +18,7 @@ const HeaderNav = ({ changeLanguage }) => {
   };
 
   return (
-    <div className="nav-wrapper">
+    <div className={classes.root}>
       <Menu mode="horizontal">
         <Menu.Item key="index">
           <Link to="/">{t("navigation.main")}</Link>
