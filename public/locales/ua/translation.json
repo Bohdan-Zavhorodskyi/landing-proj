@@ -1,0 +1,18 @@
+{
+  "main": {
+    "header": "Вітаємо",
+    "name": "Ім`я",
+    "phone": "Номер телефону",
+    "your name": "Ваше ім`я",
+    "alert name": "Введіть ваше ім`я!",
+    "alert phone": "Введіть ваш номер!",
+    "send button": "Відправити"
+  },
+  "navigation": {
+    "main": "На головну",
+    "portfolio": "Портфоліо"
+  },
+  "portfolio": {
+    "welcome": "Тут буде портфоліо"
+  }
+}

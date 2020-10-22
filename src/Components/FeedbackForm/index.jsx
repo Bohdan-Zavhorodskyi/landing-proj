@@ -1,16 +1,18 @@
 import React, { useState } from "react";
 import useStyles from "./styles";
 import { Form, Input, Button } from "antd";
+import { useTranslation, Trans } from "react-i18next";
 
 const FeedbackForm = () => {
   const classes = useStyles();
+  const { t } = useTranslation();
+
   const [formData, setFormData] = useState({ username: "", phoneNumber: "" });
 
   const handleSubmit = ({ username, phoneNumber }) => {
     setFormData({ username, phoneNumber });
+    console.log(formData, "formData");
   };
-
-  console.log(formData, "formData");
 
   const onFinishFailed = (errorInfo) => {
     console.log("Failed:", errorInfo);
@@ -25,22 +27,22 @@ const FeedbackForm = () => {
       >
         <div className={classes.formItemsWrap}>
           <Form.Item
-            label="Имя"
+            label={t('main.your name') + ':'}
             name="username"
             className={classes.formItem}
-            rules={[{ required: true, message: "Введите имя!" }]}
+            rules={[{ required: true, message: `${t('main.alert name')}` }]}
           >
             <Input
               className={classes.input}
               autoComplete="off"
-              placeholder="Ваше имя"
+              placeholder={t('main.your name')}
             />
           </Form.Item>
           <Form.Item
-            label="Номер телефона:"
+            label={t('main.phone') + ':'}
             name="phoneNumber"
             className={classes.formItem}
-            rules={[{ required: true, message: "Введите номер телефона!" }]}
+            rules={[{ required: true, message: `${t('main.alert phone')}` }]}
           >
             <Input
               className={classes.input}
@@ -51,7 +53,9 @@ const FeedbackForm = () => {
           </Form.Item>
           <Form.Item>
             <Button type="primary" htmlType="submit">
-              Отправить
+              <Trans i18nKey="main.send button">
+                Відправити
+              </Trans>
             </Button>
           </Form.Item>
         </div>

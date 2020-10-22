@@ -1,0 +1,18 @@
+{
+  "main": {
+    "header": "Welcome",
+    "name": "Name",
+    "phone": "Phone number",
+    "your name": "Your name",
+    "alert name": "Type your name!",
+    "alert phone": "Type your phone!",
+    "send button": "Send"
+  },
+  "navigation": {
+    "main": "Main",
+    "portfolio": "Portfolio"
+  },
+  "portfolio": {
+    "welcome": "Here will be portfolio"
+  }
+}
