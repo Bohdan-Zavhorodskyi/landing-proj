@@ -7,7 +7,6 @@ i18n
   .use(initReactI18next)
   .init({
     fallbackLng: 'ua',
-
     react: {
       useSuspense: false
     }

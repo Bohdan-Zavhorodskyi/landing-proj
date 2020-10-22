@@ -13,7 +13,7 @@ const Slider = ({ images }) => {
         {images.map((item, i) => (
           <div className={classes.eachFade} key={i}>
             <div className="image-container">
-              <img src={item} />
+              <img src={item} alt="item" />
             </div>
             <span>Slide {i + 1}</span>
           </div>
