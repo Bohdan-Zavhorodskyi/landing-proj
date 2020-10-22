@@ -2,8 +2,7 @@ import React from "react";
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 import { Layout } from 'antd';
 
@@ -11,6 +10,7 @@ import OurProduct from "./Components/OurProduct";
 import AboutUs from "./Components/AboutUs";
 import FeedbackForm from "./Components/FeedbackForm";
 import Portfolio from './Components/Portfolio';
+import HeaderNav from './Components/Header';
 
 import 'antd/dist/antd.css';
 import "./App.css";
@@ -22,16 +22,7 @@ const App = () => {
     <Router>
       <Layout>
         <Header>
-          <div>
-            <ul>
-              <li>
-                <Link to="/">На главную</Link>
-              </li>
-              <li>
-                <Link to="/portfolio">Портфолио</Link>
-              </li>
-            </ul>
-          </div>
+          <HeaderNav />
         </Header>
         <Content>
           <Switch>
