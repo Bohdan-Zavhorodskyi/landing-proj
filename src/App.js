@@ -10,7 +10,7 @@ import Portfolio from "./Components/Portfolio";
 import HeaderNav from "./Components/Header";
 
 import "antd/dist/antd.css";
-import "./App.css";
+import "./App.scss";
 
 const { Header, Footer, Content } = Layout;
 
